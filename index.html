@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram top Photos</title>
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+
+      </div>    
+      <div class="col-md-10 col-sm-12">
+        <h1><span id="numTopPhotos"></span> Instagram photos for <div id="inputGroupUser" class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input type="text" class="form-control" id="txtUser" placeholder="enter login name" aria-label="enter login name" aria-describedby="btnGroupAddon" value="instagram">
+            <button class="btn btn-primary" id="btnSubmit">></button>
+          </div>
+        </h1>
+      <input type="checkbox" id="chkBest" checked="checked" /><label for="chkBest">Show only top <input type="number" name="quantity" id="inTopN" min="1" max="12" value="10"/></label>
+      <div id="treemap"></div>
+      <div>From a total of <strong><span id="totalPhotos"></span></strong>  photos, back to <span id="maxDate"> </span><button class="btn btn-success" type="button" id="btnMore">analyze more Photos</button></div>
+      
+      
+
+      <br>
+      <div>
+        Made with love by <a href="http://johnguerra.co">John Alexis Guerra Gómez</a>
+      </div>
+    </div> 
+    <!-- col-md-10 -->
+  </div>
+
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+<script src="d3.js"></script>
+
+<script src="TreeMap.js"> </script>
+<script src="utils.js"> </script>
+<script src="mainSimpler.js"> </script>
+<!-- GOOGLE ANALYTICS -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-72531610-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+</body>
+</html>
